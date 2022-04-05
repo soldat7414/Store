@@ -51,7 +51,7 @@ public class Validator {
         return str;
     }
 
-    public static int validateQuantityInput(Scanner scanner, String message){
+    public static int validateQuantityAndRateInput(Scanner scanner, String message){
         int value = -1;
         do{
             try{
