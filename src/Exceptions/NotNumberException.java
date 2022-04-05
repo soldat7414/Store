@@ -1,10 +1,10 @@
 package Exceptions;
 
-public class NotIntException extends Exception {
+public class NotNumberException extends Exception {
 
     String input;
 
-    public NotIntException(String message, String input){
+    public NotNumberException(String message, String input){
         super(message);
         this.input = input;
     }
@@ -12,4 +12,5 @@ public class NotIntException extends Exception {
     public String getInput() {
         return input;
     }
+
 }

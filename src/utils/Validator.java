@@ -1,8 +1,7 @@
 package utils;
 
 import Exceptions.EmptyStringException;
-import Exceptions.NotDoubleException;
-import Exceptions.NotIntException;
+import Exceptions.NotNumberException;
 import Exceptions.NotPositiveValueException;
 
 import java.util.Scanner;
@@ -15,13 +14,15 @@ public class Validator {
             return str;
     }
 
-    public static int isInt (Scanner scanner) throws NotIntException {
-        if(!scanner.hasNextInt()) throw new NotIntException(" - не число!", scanner.nextLine().trim());
+    public static int isInt (Scanner scanner) throws NotNumberException {
+        if(!scanner.hasNextInt()) throw new NotNumberException(" - не число!", scanner.nextLine().trim());
         return scanner.nextInt();
     }
 
-    public static double isDouble (Scanner scanner) throws NotDoubleException {
-        if(!scanner.hasNextDouble()) throw new NotDoubleException(" - не число!", scanner.nextLine().trim());
+    public static double isDouble (Scanner scanner) throws NotNumberException {
+        if(!scanner.hasNextDouble()){
+            throw new NotNumberException(" - не число!", scanner.nextLine().trim());
+        }
         return scanner.nextDouble();
     }
 
@@ -55,9 +56,9 @@ public class Validator {
         int value = -1;
         do{
             try{
-                System.out.println(message);
+                System.out.print(message);
                 value = isPositive(isInt(scanner));
-            }catch (NotIntException ex){
+            }catch (NotNumberException ex){
                 System.out.println(ex.getInput() + ex.getMessage());
             }catch (NotPositiveValueException exv){
                 System.out.println(exv.getMessage());
@@ -70,9 +71,9 @@ public class Validator {
         double value = -1;
         do{
             try{
-                System.out.println(message);
+                System.out.print(message);
                 value = isPositive(isDouble(scanner));
-            }catch (NotDoubleException ex){
+            }catch (NotNumberException ex){
                 System.out.println(ex.getInput() + ex.getMessage());
             }catch (NotPositiveValueException exv){
                 System.out.println(exv.getMessage());

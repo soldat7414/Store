@@ -28,7 +28,7 @@ public class ClientController {
                 service.calculateDiscount());
 
         String paymentRounded = Rounder.roundValue(
-                service.calculatePayment());
+                service.calculateDiscountPayment());
 
         String output = "------------------------------\n" +
                 "Имя клиента: " + name + "\n" +
