@@ -3,12 +3,12 @@ package models;
 import base.Discount;
 import base.Payment;
 
-public class Client implements Payment, Discount {
+public class Client {
 
     private String name;
     private int quantity;
     private double price;
-    private final static int DISCOUNT_RATE = 15;
+    private int discountRate;
 
     public String getName() {
         return name;
@@ -34,18 +34,11 @@ public class Client implements Payment, Discount {
         this.price = price;
     }
 
-    @Override
-    public double calculatePayment(int quota, double price){
-        return quota * price;
+    public int getDiscountRate() {
+        return discountRate;
     }
 
-    @Override
-    public double calculatePayment(double payment, double discount){
-        return payment - discount;
-    }
-
-    @Override
-    public double calculateDiscount(double payment) {
-        return payment * DISCOUNT_RATE / 100;
+    public void setDiscountRate(int discountRate) {
+        this.discountRate = discountRate;
     }
 }
