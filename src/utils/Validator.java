@@ -34,7 +34,7 @@ public class Validator {
         return value;
     }
 
-    public static String validateName(Scanner scanner){
+    public static String validateName(Scanner scanner, String message){
         String str = null;
         int count = 0;
         do{
@@ -42,7 +42,7 @@ public class Validator {
             if(count>=3 && count<6) System.out.println("Хоть пальцы сотрите, а я ЖЕЛЕЗНЫЙ!!!");
             if (count>5) System.out.println("Может у Вас кнопка залипла?");
             try{
-                System.out.print("Введите имя клиента: ");
+                System.out.print(message);
                 str = isEmptyStr(scanner.nextLine().trim());
             } catch (EmptyStringException ex){
                 System.out.println(ex.getMessage());
@@ -51,11 +51,11 @@ public class Validator {
         return str;
     }
 
-    public static int validateQuantityInput(Scanner scanner){
+    public static int validateQuantityInput(Scanner scanner, String message){
         int value = -1;
         do{
             try{
-                System.out.println("Введите количество: ");
+                System.out.println(message);
                 value = isPositive(isInt(scanner));
             }catch (NotIntException ex){
                 System.out.println(ex.getInput() + ex.getMessage());
@@ -66,11 +66,11 @@ public class Validator {
         return value;
     }
 
-    public static double validatePriceInput(Scanner scanner){
+    public static double validatePriceInput(Scanner scanner , String message){
         double value = -1;
         do{
             try{
-                System.out.println("Введите цену: ");
+                System.out.println(message);
                 value = isPositive(isDouble(scanner));
             }catch (NotDoubleException ex){
                 System.out.println(ex.getInput() + ex.getMessage());
