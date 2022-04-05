@@ -27,4 +27,8 @@ public class ClientService implements Discount, Payment {
     public double calculateDiscount() {
         return discount = payment * client.getDiscountRate() / 100;
     }
+
+    public String getName() {
+        return client.getName();
+    }
 }
