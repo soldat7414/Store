@@ -4,6 +4,12 @@ import base.Discount;
 import base.Payment;
 import models.Client;
 
+/**
+ * @author Ihor Soldatenko
+ * @version 1.0.0
+ */
+
+
 public class ClientService implements Discount, Payment {
 
     private Client client;

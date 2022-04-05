@@ -2,8 +2,13 @@ package views;
 
 import models.Client;
 import utils.Validator;
-
 import java.util.Scanner;
+
+/**
+ * @author Ihor Soldatenko
+ * @version 1.0.0
+ */
+
 
 public class ClientView {
 
@@ -25,7 +30,7 @@ public class ClientView {
         scanner = new Scanner(System.in);
 
         title = "Введите имя клиента: ";
-        name =  name = Validator.validateName(scanner, title);
+        name = Validator.validateName(scanner, title);
         model.setName(name);
 
         title = "Введите количество: ";

@@ -1,9 +1,13 @@
 package controllers;
 
-import models.Client;
 import services.ClientService;
 import utils.Rounder;
 import views.ClientView;
+
+/**
+ * @author Ihor Soldatenko
+ * @version 1.0.0
+ */
 
 public class ClientController {
 

@@ -3,8 +3,13 @@ package utils;
 import Exceptions.EmptyStringException;
 import Exceptions.NotNumberException;
 import Exceptions.NotPositiveValueException;
-
 import java.util.Scanner;
+
+/**
+ * @author Ihor Soldatenko
+ * @version 1.0.0
+ */
+
 
 public class Validator {
 

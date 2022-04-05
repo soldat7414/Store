@@ -1,7 +1,10 @@
 package models;
 
-import base.Discount;
-import base.Payment;
+/**
+ * @author Ihor Soldatenko
+ * @version 1.0.0
+ */
+
 
 public class Client {
 

@@ -3,6 +3,11 @@ import models.Client;
 import services.ClientService;
 import views.ClientView;
 
+/**
+ * @author Ihor Soldatenko
+ * @version 1.0.0
+ */
+
 public class Main {
     public static void main(String[] args) {
 
